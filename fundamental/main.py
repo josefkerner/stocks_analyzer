@@ -1,7 +1,6 @@
 from fundamental import config
-from fundamental import company_profiles as profiles
-from fundamental import company_financials as financials
-from fundamental import company_fundamentals as fundamentals
+from fundamental.lib import company_financials as financials, company_profiles as profiles, \
+    company_fundamentals as fundamentals
 
 import pandas as pd
 
@@ -151,6 +150,8 @@ def calculate_intrinsic_value(df, report_year, eval_period, projection_window,
 
 
 if __name__ == '__main__':
+
+    API_KEY = '4e8ff111cf9ca9d128c5941a2bf0d671'
 
     prepare_company_profiles(10.00, 'data/', config.api_key)
 
